@@ -1,0 +1,218 @@
+@import "./layout.scss";
+
+//header 
+header{
+    .header-contact {
+        padding:.2rem 3rem;
+    }
+
+    .header-separator {
+        border-top: .1px solid $light-dark-color;
+        margin: 0 3rem;
+    }
+   
+    .header-main {
+        padding: 2rem 3rem;
+        .menu {
+            display: none;
+        }
+        .border-vertical{
+            border: 1px solid #D1D1D1;
+            transform: rotate(180deg);
+            height: 20px;
+            margin-top: 15px;
+        }
+        .search-bar{
+            background: #F9F9F9;
+            border: 1px solid #D1D1D1;
+            box-sizing: border-box;
+            border-radius: 12px;
+            .category-select{
+                font-family: $primary-font;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 22px;
+                background-image: url("../images/icons/ic-chevron-down.svg")
+            } 
+            .search-text{
+                font-size: 14px;
+                line-height: 19px;
+                font-family: $primary-font;
+            }
+        }
+    }
+    .search-bar-second {
+        display: none !important;
+    }
+}
+
+//navbar 
+
+nav {
+    padding: 1rem 3rem;
+    background: #F9F9F9;
+}
+
+.nav-item{
+    background: transparent;
+    border: none;
+    color: $primary-font-color;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    outline: none;
+    &::after{
+        color: $primary-color;
+    }
+    &:hover{
+        background: transparent;
+        color: $primary-font-color;
+    }
+    &:focus{
+        background-color: transparent !important;
+        box-shadow: none !important;
+        color: $primary-font-color !important;
+    }
+}
+.category-item {
+    color: $primary-font-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+//sidebar 
+aside {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    // box-shadow: -2px 0 16px rgb(0 0 0 / 12%);
+    .backdrop {
+        -webkit-animation: fadeIn .3s;
+        animation: fadeIn .3s;
+        height: 100%;
+        width: 100%;
+        background: rgba(26,24,24,.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backdrop-filter: blur(1px);
+        backdrop-filter: blur(1px);
+        background: linear-gradient(45deg,transparent,rgba(10,10,10,.101961),transparent);
+    }
+
+    .sidebar-items {
+        display: flex;
+        color: $primary-font-color;
+        // box-shadow: -2px 0 16px rgba(0 0 0 / 80%);
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9;
+        position: relative;
+        padding: 0 3vw;
+        background: #F9F9F9;
+        box-sizing: border-box;
+        width: 20%;
+        opacity: .98;
+        min-width: 300px;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+}
+
+//tag 
+.product-tag {
+    background: $secondary-color;
+    padding: 4px 10px;
+    border-radius: 12px;
+    h6 {
+      margin-bottom: 0;
+      color: $primary-font-color;
+      font-weight: 600;
+    }
+}
+
+//responsive design 
+
+@media (max-width:950px) {
+    header{
+        .header-main {
+            .menu{
+                display: block;
+            }
+            border-bottom: .1px solid #F9F9F9;
+        }
+    }
+    .nav-bar {
+        display: none !important;
+    }
+    aside {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width:800px) {
+    header {
+        .header-main{
+            .search-bar-first {
+                display: none !important;
+            }
+        }
+        .search-bar-second {
+            display: flex !important;
+            background: #F9F9F9;
+            .category-select{
+                font-family: $primary-font;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 22px;
+                background-image: url("../images/icons/ic-chevron-down.svg")
+            } 
+            .search-text{
+                font-size: 14px;
+                line-height: 19px;
+                font-family: $primary-font;
+            }
+        }
+    }
+    footer {
+        .footer-nav {
+            flex-direction: column;
+        } 
+    }
+}
+
+@media (max-width:600px) {
+    header {
+        .header-contact, 
+        .header-separator {
+            display: none !important;
+        }
+        .header-main {
+            padding: 2rem 1rem;
+            .cart-icon {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width:570px) {
+    header {
+        .search-bar-second {
+            .category-select {
+                font-size: 12px;
+            }
+        }
+        .search-bar-second {
+            .search-text {
+                font-size: 12px;
+            }
+        } 
+    } 
+}

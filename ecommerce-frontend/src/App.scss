@@ -1,0 +1,12 @@
+@import "./assets/scss/layout.scss";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $primary-font;
+}
