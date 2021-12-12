@@ -949,8 +949,16 @@ body {
   color: $primary-color !important;
 }
 
+.text-dark-light {
+  color: $light-dark-color !important;
+}
+
+.text-light {
+  color: $light-color !important;
+}
+
 .bg-primary {
-  background: $light-color !important;
+  background: $primary-color !important;
 }
 
 h1 {
@@ -982,7 +990,7 @@ h4 {
 }
 
 h5 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   font-family: $primary-font;
@@ -993,6 +1001,10 @@ h6 {
   font-size: 12px;
   line-height: 18px;
   font-family: $primary-font;
+}
+
+hr {
+  border: 1px solid #F9F9F9;
 }
 
 p {
@@ -1093,4 +1105,14 @@ a {
       width: calc(8.33333% * #{$i});
     }
   }
+}
+
+
+@media (max-width:445px) {
+    .section-margin {
+      margin: 2rem 1rem;
+    }
+    .section-padding {
+      padding: 2rem 1rem;
+    }
 }

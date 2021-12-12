@@ -28,6 +28,7 @@ const Nav = () => {
                     >
                         <Dropdown.Toggle
                             className="nav-item"
+                            variant="dark"
                         >
                             {navItem?.category_name}
                         </Dropdown.Toggle>

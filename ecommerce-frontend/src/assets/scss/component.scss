@@ -89,6 +89,7 @@ aside {
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 9999;
     // box-shadow: -2px 0 16px rgb(0 0 0 / 12%);
     .backdrop {
         -webkit-animation: fadeIn .3s;
@@ -121,6 +122,14 @@ aside {
         min-width: 300px;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
+        overflow-y: auto;
+        .side-item {
+            .nav-item{
+                background: transparent;
+                color: $primary-font-color;
+                border: none;
+            }
+        }
     }
 }
 
@@ -129,6 +138,7 @@ aside {
     background: $secondary-color;
     padding: 4px 10px;
     border-radius: 12px;
+    display: inline-block;
     h6 {
       margin-bottom: 0;
       color: $primary-font-color;
@@ -138,7 +148,7 @@ aside {
 
 //responsive design 
 
-@media (max-width:950px) {
+@media (max-width:1021px) {
     header{
         .header-main {
             .menu{
@@ -154,6 +164,66 @@ aside {
         display: flex;
         justify-content: flex-start;
     }
+}
+
+// button
+
+.btn {
+    border-radius:12px ;
+    font-family: $primary-font;
+    font-weight: bold;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $primary-color;
+    border:2px solid $dark-primary;
+    padding: 12px;
+
+    &:hover {
+        background-color: $dark-primary;
+        border-color: $dark-primary;
+    }
+
+    &:focus {
+        background-color: $dark-primary;
+        border-color: $dark-primary;
+        outline: none;
+    }
+}
+
+.btn-secondary {
+    color: $primary-font-color;
+    background-color: $secondary-color;
+    border:2px solid $secondary-color;
+    font-family: $primary-font;
+    padding: 12px;
+    &:hover {
+        background-color: $light-dark-color;
+        border-color: $light-dark-color;
+    }
+}
+
+//card 
+
+.card {
+    border-radius: 12px;
+    border: 1px solid #D1D1D1;
+    img {
+        border-radius: 12px;
+    }
+    .original-price {
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        text-decoration-line: line-through;
+        color: #A9A9A9;
+    }
+}
+
+.discount-tag {
+    left: 24px;
 }
 
 @media (max-width:800px) {
@@ -215,4 +285,19 @@ aside {
             }
         } 
     } 
+}
+
+//product card 
+
+.product-card {
+    transition: .4s ease-in-out;
+    &:hover {
+        transform: rotate(5deg);
+    }
+}
+
+@media (max-width:460px) {
+    .product-card {
+        width: 100% !important;
+    }
 }

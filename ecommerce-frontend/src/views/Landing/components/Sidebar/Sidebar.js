@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Image, Dropdown } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 import { navItems } from '../../../../constant/navItems';
 
@@ -39,7 +40,7 @@ const Sidebar = ({ setShowSidebar }) => {
                         navItems.map(navItem => (
                             <Dropdown
                                 key={navItem.id}
-                                drop="end"
+                                drop="down"
                                 onMouseLeave={() => hideCategory(navItem.id)}
                                 onMouseOver={() => showCategory(navItem.id)}
                             >
@@ -64,6 +65,10 @@ const Sidebar = ({ setShowSidebar }) => {
             </div>
         </aside>
     )
+}
+
+Sidebar.propTypes = {
+    setShowSidebar: PropTypes.func.isRequired
 }
 
 export default Sidebar

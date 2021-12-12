@@ -1,0 +1,184 @@
+.home {
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+
+    //best selling products
+    .best-product-header-sec {
+        display: none;
+    }
+  
+    //customer testimony
+    .customer-testimony {
+        margin: 4rem 0 4rem 3rem;
+        scroll-behavior: smooth;
+        z-index: 10;
+        .left-btn {
+            background: #151515;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            padding: 0.5em;
+            top: 50%;
+            transform: translate(0,50%);
+            left: -60px;
+            z-index: 100;
+            cursor: pointer;
+        }
+        .right-btn {
+            background: #151515;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            padding: 0.5em;
+            top: 50%;
+            transform: translate(0,50%);
+            right: -12px;
+            z-index: 100;
+            cursor: pointer;
+        }
+        .customer-testimony-list {
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+
+    //blogs
+    .our-blogs{
+        .our-blog-list{
+            .our-blog-first {
+                .card {
+                    .blog-tag {
+                        left: 20px;
+                        top: 0;
+                    }
+                    .blog1-img {
+                        filter: brightness(.5);
+                    }
+                    .blog-details {
+                        left: 20px;
+                        bottom: 10px;
+                    }
+                    .avatar {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }   
+    }
+}
+
+@media (max-width:991px) {
+    .our-blogs {
+        .our-blog-list div {
+            .last-row-blogs{
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .home {
+        .home-top-content {
+            .category-menu {
+                display: none!important;
+            }
+            .corousel-slider {
+                width: 100% !important;
+            }
+        }
+        .item-corousel {
+            height: auto !important;
+        }
+        .best-product-header-sec {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .best-selling-products {
+            flex-direction: column;
+            .best-product-header {
+                display: none!important;
+            }
+        }
+        .best-from-farmer{
+            flex-direction: column;
+            .best-from-farmer-header {
+                display: none!important;
+            }
+        }
+    }
+}
+
+.testimony-card {
+    transition: .4s ease-in;
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width:767px) {
+    .our-blogs {
+        .our-blog-list {
+            .blog-list-second{
+                margin-top: 2rem;
+            }
+        }
+    }
+    .testimony-card {
+        height: auto !important;
+        width: auto !important;
+    }
+}
+
+@media (max-width:420px) {
+    .our-blogs {
+        .our-blog-list {
+            .our-blog-first {
+                .card {
+                    .blog-details{
+                        .blog-title{
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                        .blog-add {
+                            img{
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                    h6 {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:375px) {
+    .our-blogs {
+        .our-blog-list {
+            .last-row-blogs {
+                margin-top: 2rem!important;
+                .last-row-blog div:first-child {
+                    margin-top: 2rem;
+                    flex-direction: column-reverse;
+                    .blog-desc {
+                        width: 100% !important;
+                        h5 {
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 27px;
+                        }
+                    }
+                    img {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}

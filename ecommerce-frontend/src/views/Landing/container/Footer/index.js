@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 //staticData
 import { footerItems } from '../../../../constant/footerItem';
 import { tagLists } from '../../../../constant/tagLists';
+import HeaderWithList from '../../components/HeaderWithList/HeaderWithList';
 
 //component
 import Tag from '../../components/Tag/Tag'
@@ -15,12 +15,10 @@ const Footer = () => {
                 {
                     footerItems.map(footerItem => (
                         <div key={footerItem.id} className="footer-nav-item d-flex flex-column">
-                            <h4 className="mb-4">{footerItem.title}</h4>
-                            {
-                                footerItem.sub_titles.map((item, index) => (
-                                    <Link className="mb-2" key={index} to={item.link}><h5>{item.name}</h5></Link>
-                                ))
-                            }
+                            <HeaderWithList
+                                title= {footerItem.title}
+                                list= {footerItem.sub_titles}
+                            />
                         </div>
                     ))
                 }
