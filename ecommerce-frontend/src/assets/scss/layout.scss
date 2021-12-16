@@ -1067,6 +1067,14 @@ a {
   border: 1px solid red !important;
 }
 
+.active-icon {
+  filter: invert(57%) sepia(33%) saturate(728%) hue-rotate(47deg) brightness(89%) contrast(84%);
+}
+
+.disabled-icon {
+  filter: invert(80%) sepia(2%) saturate(3%) hue-rotate(132deg) brightness(86%) contrast(83%);
+}
+
 @media (max-width: 576px) {
   @for $i from 1 through 12 {
     .col-xs-#{$i} {

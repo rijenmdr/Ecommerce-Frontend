@@ -1,0 +1,112 @@
+.search-products {
+    .search-header {
+        margin: 2rem 3rem;
+    }
+    .header-bottom{
+        .sort-filter {
+           .filter-icon {
+               display: none;
+           }
+        }
+    }
+}
+
+@media (max-width:1115px) {
+    .search-products{
+        .header-bottom{
+            .sort-filter {
+                margin-top: 10px;
+                justify-content: flex-end;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .search-products {
+        .search-header {
+            .search-header-title {
+                .display-type {
+                    margin-left: 10px;
+                    .grid-view, .list-view {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:876px) {
+    .search-products{
+        .search-content {
+            .side-filter{
+                .price-filter {
+                    .price-form{
+                        .price-input {
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:763px) {
+    .search-products{
+        .search-content{
+            flex-direction: column;
+            .side-filter{
+                flex-direction: column !important;
+                justify-content: space-between;
+                width: 100%; 
+                align-items: baseline;
+                .brand-filter,.rating-filter{
+                    margin-right: 20px;
+                }
+            }
+            .searched-products {
+                margin-left: 0;
+                width: 100%!important;
+            }
+        }
+        .header-bottom{
+            .sort-filter {
+                justify-content: space-between;
+               .filter-icon {
+                   display: block;
+                   margin-right: 10px;
+               }
+            }
+        }
+    }
+}
+
+@media (max-width:445px) {
+    .search-products {
+        .search-header {
+            margin: 2rem 1rem;
+            .search-header-title {
+                h1 {
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:360px) {
+    .search-products {
+        .search-header {
+            .search-header-title {
+                h1 {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}

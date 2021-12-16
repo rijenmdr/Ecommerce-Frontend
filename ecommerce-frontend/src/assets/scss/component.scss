@@ -204,6 +204,83 @@ aside {
     }
 }
 
+// select-input
+
+.select-wrapper{
+    background: #F9F9F9;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: .5rem;
+    .select-input {
+        font-family: $primary-font;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        background-image: url("../images/icons/ic-chevron-down.svg")
+    }  
+    .select-input:focus {
+        border: 1px solid #D1D1D1;
+    }
+}
+
+//checkboxes 
+.checkboxes {
+    .form-check{
+        display: flex;
+        align-items: center;
+        .form-check-input:checked{
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+        .form-check-label {
+            font-family: $primary-font;
+            font-size: 14px;
+            line-height: 19px;
+            margin-left: 10px;
+        }
+    }
+}
+
+//textinput 
+.text-input {
+    .form-label {
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .form-control {
+        background: #F9F9F9;
+        border: 1px solid #D1D1D1;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 19px;
+        font-family: $primary-font;
+        padding: .5rem;
+    }
+}
+
+
+//pagination 
+.product-pagination {
+    .pagination{
+        .page-item {
+            .page-link {
+                font-family: $primary-font;
+                color: $primary-color;
+            }
+        }
+        .active {
+            .page-link{
+                background-color: $primary-color;
+                border-color:$primary-color ;
+                color: #fff;
+            }
+        }
+    }
+}
 //card 
 
 .card {
@@ -224,6 +301,12 @@ aside {
 
 .discount-tag {
     left: 24px;
+}
+
+.breadcrumbs {
+    nav {
+        background: #fff;
+    }
 }
 
 @media (max-width:800px) {

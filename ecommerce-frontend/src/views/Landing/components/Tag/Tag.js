@@ -11,7 +11,7 @@ const Tag = ({tag, value, primary}) => {
 
     return (
         <div onClick={()=>!value && navigateToTag(tag.link)} 
-            className={`product-tag mr-md mt-3 cursor-pointer`}>
+            className={`product-tag cursor-pointer`}>
            <h6 className={`${primary && 'text-secondary'}`}>{value ? value :tag.name}</h6> 
         </div>
     )
@@ -22,7 +22,7 @@ Tag.propTypes = {
         name:PropTypes.string.isRequired,
         link:PropTypes.string.isRequired
     }),
-    value: PropTypes.string,
+    value: PropTypes.any,
     primary: PropTypes.bool
 }
 

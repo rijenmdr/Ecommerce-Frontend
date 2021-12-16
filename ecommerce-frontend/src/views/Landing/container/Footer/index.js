@@ -28,10 +28,12 @@ const Footer = () => {
                 <div className="tags d-flex justify-content-start flex-wrap mt-2">
                     {
                         tagLists.map((tagList, index) => (
-                            <Tag
-                                key={index}
-                                tag={tagList}
-                            />
+                            <div className='mr-md mt-2'>
+                                <Tag
+                                    key={index}
+                                    tag={tagList}
+                                />
+                            </div>
                         ))
                     }
                 </div>
