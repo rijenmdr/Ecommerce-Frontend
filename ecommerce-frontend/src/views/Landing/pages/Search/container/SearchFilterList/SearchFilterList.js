@@ -75,7 +75,7 @@ const SearchFilterList = () => {
                         />
                     </div>
                     <div className='d-flex justify-content-end'>
-                        <Button size="md">Apply</Button>
+                        <Button size="sm">Apply</Button>
                     </div>
                 </div>
             </div>

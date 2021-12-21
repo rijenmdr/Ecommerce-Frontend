@@ -1018,6 +1018,8 @@ p {
 a {
   text-decoration: none;
   color: $primary-color;
+  font-family: $primary-font;
+  font-size: 1rem;
   &:hover{
     color: $dark-primary;
   }
@@ -1073,6 +1075,10 @@ a {
 
 .disabled-icon {
   filter: invert(80%) sepia(2%) saturate(3%) hue-rotate(132deg) brightness(86%) contrast(83%);
+}
+
+.avatar {
+  object-fit: cover;
 }
 
 @media (max-width: 576px) {

@@ -7,7 +7,6 @@ import LandingRoutes from './LandingRoutes';
 import '../../assets/scss/component.scss';
 
 const LandingLayout = () => {
-    console.log("hello")
     return (
         <div>
             <Header/>

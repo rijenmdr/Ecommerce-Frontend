@@ -41,30 +41,6 @@
             }
         }
     }
-
-    //blogs
-    .our-blogs{
-        .our-blog-list{
-            .our-blog-first {
-                .card {
-                    .blog-tag {
-                        left: 20px;
-                        top: 0;
-                    }
-                    .blog1-img {
-                        filter: brightness(.5);
-                    }
-                    .blog-details {
-                        left: 20px;
-                        bottom: 10px;
-                    }
-                    .avatar {
-                        object-fit: cover;
-                    }
-                }
-            }
-        }   
-    }
 }
 
 @media (max-width:991px) {
@@ -129,32 +105,6 @@
     .testimony-card {
         height: auto !important;
         width: auto !important;
-    }
-}
-
-@media (max-width:420px) {
-    .our-blogs {
-        .our-blog-list {
-            .our-blog-first {
-                .card {
-                    .blog-details{
-                        .blog-title{
-                            font-size: 14px;
-                            line-height: 20px;
-                        }
-                        .blog-add {
-                            img{
-                                width: 20px;
-                                height: 20px;
-                            }
-                        }
-                    }
-                    h6 {
-                        font-size: 10px;
-                    }
-                }
-            }
-        }
     }
 }
 
