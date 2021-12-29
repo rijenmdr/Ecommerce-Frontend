@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Col, Image, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PrimaryBlog from '../../../../components/Blog/PrimaryBlog';
 import SecondaryBlog from '../../../../components/Blog/SecondaryBlog';
 
 const OurBlogs = () => {
+    const navigate = useNavigate();
     const [blog] = useState({
         id: 1,
         title: "Our chef tips for a great and tasty dinner ready in 20 minutes",
@@ -25,12 +26,13 @@ const OurBlogs = () => {
         <div className="section-margin our-blogs d-flex flex-column mt-5">
             <div className="our-blog-header d-flex justify-content-between align-items-center">
                 <h3 className="">Read our Blog posts</h3>
-                <Link
-                    to="/blogs"
-                    className="cursor-pointer ml-md d-flex align-items-baseline">
+                <h5
+                    onClick={()=>navigate('/blogs')}
+                    className="cursor-pointer ml-md d-flex align-items-baseline"
+                >
                     View More
                     <h5 className="text-secondary ml-sm">{'>'}</h5>
-                </Link>
+                </h5>
             </div>
             <Row className="our-blog-list mt-4">
                 <Col className="our-blog-first" lg="6" md="6">

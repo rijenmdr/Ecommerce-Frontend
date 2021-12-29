@@ -1,29 +1,81 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Breadcrumbs from '../../container/Breadcrumb'
 import BlogDetailHeader from './container/BlogDetailHeader/BlogDetailHeader';
 
 import './BlogDetail.scss';
 import BlogDetailContent from './container/BlogDetailContent/BlogDetailContent';
 import RelatedBlogs from './container/RelatedBlogs/RelatedBlogs';
+import { useParams } from 'react-router-dom';
+import { useQuery } from 'react-query';
+import axios from '../../../../helper/axios';
+
+const fetchBlogDetail = async (parameter) => {
+    console.log(parameter.queryKey)
+    const [key, id] = parameter.queryKey
+    console.log(key)
+    const data = await axios.get(`/blog/get-blog-detail/${id}`)
+    return data;
+}
 
 const BlogDetail = () => {
+    const {id} = useParams();
+
+    const [blog, setBlog] = useState({});
+    const [relatedBlogs, setRelatedBlogs] = useState([]);
+
     useEffect(() => {
         window.scrollTo(0, 210)
-    }, [])
+    }, [id]);
+
+    const { status } = useQuery(['blogs', id], fetchBlogDetail, {
+        keepPreviousData: true,
+        enabled: !!id,
+        onSuccess: (res)=>{
+            const result = {
+                status: res.status + "-" + res.statusText,
+                headers: res.headers,
+                data: res.data,
+              };
+            setBlog(result.data.blog);
+            setRelatedBlogs(result.data.relatedBlogs);
+        }
+    });
+
     return (
         <div className='blog-details'>
             <Breadcrumbs
                 title="Apple"
             />
-            <div className='section-margin blog-detail-header'>
-                <BlogDetailHeader />
-            </div>
-            <div className='section-margin d-flex justify-content-center blog-detail-content'>
-                <BlogDetailContent />
-            </div>
-            <div className='section-padding related-blogs mt-5'>
-                <RelatedBlogs />
-            </div>
+            {
+                status === "loading" &&
+                <div>
+                    Loading...
+                </div>
+            }
+            {status ===  "success" && 
+                <>
+                    <div className='section-margin blog-detail-header'>
+                    <BlogDetailHeader 
+                        blog={blog}
+                    />
+                    </div>
+                    <div className='section-margin d-flex justify-content-center blog-detail-content'>
+                        <BlogDetailContent 
+                            blog={blog}
+                        />
+                    </div>
+                    {
+                        relatedBlogs && relatedBlogs.length !== 0 &&
+                            <div className='section-padding related-blogs mt-5'>
+                                <RelatedBlogs 
+                                    blogs= {relatedBlogs}
+                                />
+                            </div>
+                    }
+                    
+                </>
+            }
+            
         </div>
     )
 }

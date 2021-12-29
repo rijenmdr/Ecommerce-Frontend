@@ -1,26 +1,35 @@
-import React from 'react'
-import { Card, CardImg } from 'react-bootstrap'
+import React from 'react';
+import { Card, CardImg } from 'react-bootstrap';
+import moment from 'moment';
 import Tag from '../Tag/Tag'
+import { ellipse } from '../../../../helper/ellipse';
+import { useNavigate } from 'react-router-dom';
 
 const SecondaryBlog = ({ blog }) => {
+    const navigate = useNavigate();
+
+    const navigateToBlogDetail = (id) => {
+        navigate(`/blogs/${id}`)
+    }
+
     return (
-        <div className='cursor-pointer'>
+        <div onClick={() => navigateToBlogDetail(blog?._id)} className='cursor-pointer'>
             <Card>
-                <CardImg src={blog.cover_url} />
+                <CardImg style={{ height: "216px" }} src={blog?.previewImg} />
             </Card>
             <div className="d-flex flex-column mt-2">
                 <div>
                     <Tag
-                        tag={blog.tag}
+                        value={blog?.categoryId?.name}
                         primary={true}
                     />
                 </div>
                 <h4 className="mt-1">
-                    {blog.title}
+                    {ellipse(blog?.title, 40)}
                 </h4>
-                <div className="d-flex mt-2">
-                    <h6>{blog.author}</h6>
-                    <h6 className="ml-xl">{blog.published_date}</h6>
+                <div className="d-flex mt-2 justify-content-between">
+                    <h6>{blog?.authorId?.name}</h6>
+                    <h6 className="ml-xl">{moment(blog?.createdAt).format('ll')}</h6>
                 </div>
             </div>
         </div>

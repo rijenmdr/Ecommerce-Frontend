@@ -1015,6 +1015,10 @@ p {
   font-family: $primary-font;
 }
 
+.text-decoration-none {
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
   color: $primary-color;

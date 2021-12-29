@@ -4,7 +4,7 @@ import PrimaryBlog from '../../../../components/Blog/PrimaryBlog';
 
 import { capitalize } from '../../../../../../helper/capitalize';
 
-const BlogHeader = ({ blog, search, archive, category }) => {
+const BlogHeader = ({ blog, archive, category }) => {
     const [filterString, setFilterString] = useState('');
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const BlogHeader = ({ blog, search, archive, category }) => {
             setFilterString('')
         }
         window.scrollTo(0, 0);
-    }, [archive,category])
+    }, [archive, category])
 
 
     // const removeFilter = (filter) => {
