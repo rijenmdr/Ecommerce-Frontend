@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactQueryDevtools } from 'react-query/devtools';
+// import { ReactQueryDevtools } from 'react-query/devtools';
 import { toast, ToastContainer } from 'react-toastify';
 
 import AppRoutes from './routes';
@@ -22,7 +22,7 @@ const App = () => {
                     pauseOnHover
                 />
             </div>
-            <ReactQueryDevtools initialIsOpen={false}/>
+            {/* <ReactQueryDevtools initialIsOpen={false}/> */}
         </>
     )
 }
