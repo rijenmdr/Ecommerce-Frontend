@@ -1,9 +1,11 @@
 import React from 'react';
 import { Card, CardImg } from 'react-bootstrap';
 import moment from 'moment';
-import Tag from '../Tag/Tag'
-import { ellipse } from '../../../../helper/ellipse';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+
+import Tag from '../Tag/Tag';
+import { ellipse } from '../../../../helper/ellipse';
 
 const SecondaryBlog = ({ blog }) => {
     const navigate = useNavigate();
@@ -34,6 +36,10 @@ const SecondaryBlog = ({ blog }) => {
             </div>
         </div>
     )
+}
+
+SecondaryBlog.propTypes = {
+    blog: PropTypes.object.isRequired
 }
 
 export default SecondaryBlog

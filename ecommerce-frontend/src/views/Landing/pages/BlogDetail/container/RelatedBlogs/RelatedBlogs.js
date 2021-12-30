@@ -1,7 +1,8 @@
-import React from 'react'
-import { Col, Row } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
-import SecondaryBlog from '../../../../components/Blog/SecondaryBlog'
+import React from 'react';
+import { Col, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import SecondaryBlog from '../../../../components/Blog/SecondaryBlog';
+import PropTypes from 'prop-types';
 
 const RelatedBlogs = ({ blogs }) => {
     const navigate = useNavigate();
@@ -26,6 +27,10 @@ const RelatedBlogs = ({ blogs }) => {
             </Row>
         </>
     )
+}
+
+RelatedBlogs.propTypes = {
+    blogs: PropTypes.array.isRequired
 }
 
 export default RelatedBlogs

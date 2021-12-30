@@ -1,6 +1,7 @@
 import moment from 'moment';
 import React from 'react';
 import { Image } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 const CommentSection = ({ comment }) => {
     return (
@@ -25,6 +26,10 @@ const CommentSection = ({ comment }) => {
             </div>
         </div>
     )
+}
+
+CommentSection.propTypes = {
+    comment: PropTypes.object.isRequired
 }
 
 export default CommentSection

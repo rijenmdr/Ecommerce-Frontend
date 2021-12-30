@@ -7,6 +7,7 @@ import TextAreaInput from '../../../../components/TextAreaInput/TextAreaInput';
 import { toast } from 'react-toastify';
 
 import TextInput from '../../../../components/TextInput/TextInput';
+import PropTypes from 'prop-types';
 
 const ReplyForm = ({ blogId }) => {
     const [name, setName] = useState('');
@@ -103,6 +104,10 @@ const ReplyForm = ({ blogId }) => {
             </Form>
         </div>
     )
+}
+
+ReplyForm.propTypes = {
+    blogId: PropTypes.string.isRequired
 }
 
 export default ReplyForm

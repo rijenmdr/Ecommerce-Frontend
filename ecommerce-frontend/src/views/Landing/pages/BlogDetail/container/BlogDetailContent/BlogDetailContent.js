@@ -4,6 +4,7 @@ import CommentSection from '../../components/CommentSection/CommentSection';
 import ReplyForm from '../../components/ReplyForm/ReplyForm';
 import SocialShare from '../../components/SocialShare/SocialShare';
 import ReactHtmlParser from 'react-html-parser';
+import PropTypes from 'prop-types';
 
 const BlogDetailContent = ({ blog }) => {
     return (
@@ -49,6 +50,10 @@ const BlogDetailContent = ({ blog }) => {
             </div>
         </div>
     )
+}
+
+BlogDetailContent.propTypes = {
+    blog: PropTypes.object.isRequired
 }
 
 export default BlogDetailContent

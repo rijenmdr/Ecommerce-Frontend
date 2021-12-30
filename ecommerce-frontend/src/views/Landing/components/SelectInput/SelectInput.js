@@ -1,5 +1,6 @@
-import React from 'react'
-import { Form } from 'react-bootstrap'
+import React from 'react';
+import { Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 const SelectInput = ({ selectOptions, value, setValue }) => {
     return (
@@ -18,6 +19,12 @@ const SelectInput = ({ selectOptions, value, setValue }) => {
             </Form.Select>
         </div>
     )
+}
+
+SelectInput.propTypes = {
+    selectOptions: PropTypes.array.isRequired,
+    value: PropTypes.any,
+    setValue: PropTypes.func,
 }
 
 export default SelectInput

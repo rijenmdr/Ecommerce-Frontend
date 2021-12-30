@@ -8,6 +8,8 @@ import RelatedBlogs from './container/RelatedBlogs/RelatedBlogs';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from '../../../../helper/axios';
+import Loading from '../../components/Loading';
+import NoData from '../../components/NoData';
 
 const fetchBlogDetail = async (parameter) => {
     console.log(parameter.queryKey)
@@ -30,6 +32,8 @@ const BlogDetail = () => {
     const { status } = useQuery(['blogs', id], fetchBlogDetail, {
         keepPreviousData: true,
         enabled: !!id,
+        retry: false,
+        refetchOnWindowFocus: false,
         onSuccess: (res)=>{
             const result = {
                 status: res.status + "-" + res.statusText,
@@ -48,9 +52,11 @@ const BlogDetail = () => {
             />
             {
                 status === "loading" &&
-                <div>
-                    Loading...
-                </div>
+                <Loading/>
+            }
+             {
+                status === "error" &&
+                <NoData/>
             }
             {status ===  "success" && 
                 <>

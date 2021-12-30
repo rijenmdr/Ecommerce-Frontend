@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, Col } from 'react-bootstrap';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
 const BlogDetailHeader = ({ blog }) => {
     return (
@@ -30,6 +31,10 @@ const BlogDetailHeader = ({ blog }) => {
             </div>
         </Card>
     )
+}
+
+BlogDetailHeader.propTypes = {
+    blog: PropTypes.object.isRequired
 }
 
 export default BlogDetailHeader

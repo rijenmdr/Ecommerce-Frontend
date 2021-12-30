@@ -1,6 +1,8 @@
-import React from 'react'
-import { Card, CardImg, Image } from 'react-bootstrap'
-import Tag from '../Tag/Tag'
+import React from 'react';
+import { Card, CardImg, Image } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+
+import Tag from '../Tag/Tag';
 
 const PrimaryBlog = ({ blog }) => {
     return (
@@ -32,6 +34,10 @@ const PrimaryBlog = ({ blog }) => {
             </div>
         </Card>
     )
+}
+
+PrimaryBlog.propTypes = {
+    blog: PropTypes.object.isRequired
 }
 
 export default PrimaryBlog

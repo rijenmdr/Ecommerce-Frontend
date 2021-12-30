@@ -4,6 +4,9 @@ import SecondaryBlog from '../../../../components/Blog/SecondaryBlog';
 import TextInput from '../../../../components/TextInput/TextInput';
 import FilterList from '../../components/FilterList/FilterList';
 
+import NoData from '../../../../components/NoData';
+import Loading from '../../../../components/Loading';
+
 const archive = {
     title: "Archive",
     list: [
@@ -122,22 +125,38 @@ const BlogContent = ({
                     </div>
                 </div>
             </Col>
+
             {
                 status === "loading" &&
-                <div>Loading...</div>
+                <Col xl="8" lg="12">
+                    <Row>
+                        <Loading/>
+                    </Row>
+                </Col>
             }
+
+            {
+                status === "error" &&
+                <Col xl="8" lg="12">
+                    <Row>
+                        <NoData/>
+                    </Row>
+                </Col>
+            }
+
             {status === "success" &&
                 <>
                     <Col xl="8" lg="12">
                         <Row>
                             {
-                                blogs.length !== 0 && blogs.map(blog => (
+                                blogs.length !== 0 ? blogs.map(blog => (
                                     <Col className='mb-4 justify-content-between' key={blog._id} xl="4" lg="4" md="6">
                                         <SecondaryBlog
                                             blog={blog}
                                         />
                                     </Col>
-                                ))
+                                )) :
+                                <NoData/>
                             }
                         </Row>
                     </Col>

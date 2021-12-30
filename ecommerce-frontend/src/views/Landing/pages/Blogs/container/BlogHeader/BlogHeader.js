@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import PrimaryBlog from '../../../../components/Blog/PrimaryBlog';
 
 import { capitalize } from '../../../../../../helper/capitalize';
@@ -57,6 +58,12 @@ const BlogHeader = ({ blog, archive, category }) => {
             </Row>
         </>
     )
+}
+
+BlogHeader.propTypes = {
+    blog: PropTypes.object.isRequired,
+    archive: PropTypes.string,
+    category: PropTypes.string
 }
 
 export default BlogHeader

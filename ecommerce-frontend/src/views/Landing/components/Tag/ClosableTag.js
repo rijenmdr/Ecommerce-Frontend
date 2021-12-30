@@ -16,7 +16,8 @@ const ClosableTag = ({ tag, removeTag }) => {
 }
 
 ClosableTag.propTypes = {
-    tag: PropTypes.string.isRequired
+    tag: PropTypes.string.isRequired,
+    removeTag: PropTypes.func.isRequired
 }
 
 export default ClosableTag

@@ -1,5 +1,6 @@
-import React from 'react'
-import { Form } from 'react-bootstrap'
+import React from 'react';
+import { Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 const TextAreaInput = ({ label, row, value, setValue, placeholder, disabled }) => {
     return (
@@ -15,6 +16,15 @@ const TextAreaInput = ({ label, row, value, setValue, placeholder, disabled }) =
             />
         </Form.Group>
     )
+}
+
+TextAreaInput.propTypes = {
+    label: PropTypes.string.isRequired,
+    row: PropTypes.number.isRequired,
+    value: PropTypes.any,
+    setValue: PropTypes.func,
+    placeholder: PropTypes.string.isRequired,
+    disabled: PropTypes.bool
 }
 
 export default TextAreaInput
