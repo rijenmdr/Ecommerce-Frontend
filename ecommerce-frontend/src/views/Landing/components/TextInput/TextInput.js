@@ -2,17 +2,34 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-const TextInput = ({ label, type, value, setValue, placeholder, disabled }) => {
+const TextInput = ({
+    name,
+    label,
+    type,
+    value,
+    handleChange,
+    handleBlur,
+    placeholder,
+    disabled,
+    touched,
+    errors
+}) => {
     return (
         <Form.Group className="mb-3 text-input" controlId="exampleForm.ControlInput1">
             <Form.Label>{label}</Form.Label>
             <Form.Control
+                name={name}
                 value={value}
                 type={type}
                 disabled={disabled || false}
                 placeholder={placeholder}
-                onChange={(e) => setValue(e.target.value)}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={touched && errors ? "input-error" : null}
             />
+            {touched && errors ? (
+                <div className="error-message">{errors}</div>
+            ) : null}
         </Form.Group>
     )
 }

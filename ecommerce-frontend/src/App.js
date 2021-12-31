@@ -16,8 +16,7 @@ const App = () => {
                 <AppRoutes/>
                 <ToastContainer
                     position={toast.POSITION.TOP_RIGHT}
-                    autoClose={5000}
-                    hideProgressBar={false}
+                    autoClose={3000}
                     closeOnClick={true}
                     pauseOnHover
                 />

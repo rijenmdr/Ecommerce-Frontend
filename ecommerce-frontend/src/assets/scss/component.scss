@@ -188,7 +188,7 @@ aside {
     &:focus {
         background-color: $dark-primary;
         border-color: $dark-primary;
-        outline: none;
+        box-shadow: 0 0 0 0.25rem rgba(145, 255, 102, 0.25);
     }
     
     &:disabled {
@@ -266,8 +266,20 @@ aside {
         font-family: $primary-font;
         padding: .5rem;
     }
+    .form-control:focus {
+        box-shadow: 0 0 0 0.25rem rgba(145, 255, 102, 0.25);
+    }
 }
 
+.input-error {
+    border-color: $danger-color !important;
+}
+
+.error-message {
+    font-size: 0.75rem;
+    font-family: $primary-font;
+    color: $danger-color !important;
+}
 
 //pagination 
 .product-pagination {

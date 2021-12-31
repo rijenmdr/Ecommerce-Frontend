@@ -48,7 +48,7 @@ const BlogDetail = () => {
     return (
         <div className='blog-details'>
             <Breadcrumbs
-                title="Apple"
+                title={blog?._id}
             />
             {
                 status === "loading" &&
