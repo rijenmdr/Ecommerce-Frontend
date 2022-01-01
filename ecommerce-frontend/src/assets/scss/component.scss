@@ -458,8 +458,7 @@ aside {
 .lds-ripple {
     display: inline-block;
     position: relative;
-    width: 200px;
-    height: 200px;
+    transform: translate(-50px,-50px);
   }
   .lds-ripple div {
     position: absolute;

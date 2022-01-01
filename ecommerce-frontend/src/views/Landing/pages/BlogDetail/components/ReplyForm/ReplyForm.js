@@ -13,14 +13,16 @@ import PropTypes from 'prop-types';
 //validation
 import { replyFormValidation } from './ReplyFormValidation';
 
-const ReplyForm = ({ blogId }) => {
+const ReplyForm = ({ blogId, blogComments, setBlogComments }) => {
     const [isLoading, setLoading] = useState(false);
 
     const mutation = useMutation(async (postData) => {
         console.log(postData)
         return await axiosInstances.post('/blog/add-comment', postData)
     }, {
-        onSuccess: () => {
+        onSuccess: (res) => {
+            const newComment = res.data.comment;
+            setBlogComments([newComment, ...blogComments]);
             toast.success("Comment added successfully");
             setLoading(false);
         },
@@ -104,7 +106,7 @@ const ReplyForm = ({ blogId }) => {
                                 errors={errors.comment}
                             />
                         </Row>
-                        <Row className="w-30 send-btn mt-2">
+                        <div className="w-30 send-btn mt-2">
                             <Button
                                 type="submit"
                                 size='sm'
@@ -120,7 +122,7 @@ const ReplyForm = ({ blogId }) => {
                                         'Send Comment'
                                 }
                             </Button>
-                        </Row>
+                        </div>
                     </Form>
                 )}
             </Formik>
@@ -129,7 +131,9 @@ const ReplyForm = ({ blogId }) => {
 }
 
 ReplyForm.propTypes = {
-    blogId: PropTypes.string.isRequired
+    blogId: PropTypes.string.isRequired,
+    blogComments: PropTypes.array.isRequired,
+    setBlogComments: PropTypes.func
 }
 
 export default ReplyForm

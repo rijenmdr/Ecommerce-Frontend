@@ -17,7 +17,13 @@ const RelatedBlogs = ({ blogs }) => {
             <Row>
                 {
                     blogs?.map(blog => (
-                        <Col className='mb-4 justify-content-between' key={blog.id} xl="3" lg="4" md="6">
+                        <Col 
+                            className='mb-4 justify-content-between' 
+                            key={blog._id} 
+                            xl="3" 
+                            lg="4" 
+                            md="6"
+                        >
                             <SecondaryBlog
                                 blog={blog}
                             />

@@ -30,7 +30,6 @@ const BlogDetail = () => {
     }, [id]);
 
     const { status } = useQuery(['blogs', id], fetchBlogDetail, {
-        keepPreviousData: true,
         enabled: !!id,
         retry: false,
         refetchOnWindowFocus: false,

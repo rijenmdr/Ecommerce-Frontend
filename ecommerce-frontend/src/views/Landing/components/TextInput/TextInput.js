@@ -35,12 +35,16 @@ const TextInput = ({
 }
 
 TextInput.propTypes = {
+    name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     value: PropTypes.any,
-    setValue: PropTypes.func,
     placeholder: PropTypes.string.isRequired,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    handleChange: PropTypes.func.isRequired,
+    handleBlur: PropTypes.func,
+    touched: PropTypes.any,
+    errors: PropTypes.string
 }
 
 export default TextInput
