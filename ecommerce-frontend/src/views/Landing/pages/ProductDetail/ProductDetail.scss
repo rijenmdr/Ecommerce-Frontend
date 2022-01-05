@@ -1,0 +1,118 @@
+@import '../../../../assets/scss/layout.scss';
+
+//component
+.select-no-item {
+    border: 1px solid #D1D1D1;
+    background: #F9F9F9;
+    border-radius: 12px;
+    padding: .5rem 1rem;
+    .border-vertical{
+        border: 1px solid #D1D1D1;
+        transform: rotate(180deg);
+        height: 20px;
+    }
+    .select-no {
+       font-size: 14px;
+       font-weight: 500;
+    }
+}
+
+.product-detail {
+    .row {
+        .product-content {
+            .product-detail-tabs {
+                .tab-headings {
+                    h4{
+                        text-align: center;
+                        border-bottom: 3px solid $light-dark-color;
+                        width: 100%;
+                        padding-bottom: .5rem;
+                        cursor: pointer;
+                        &.active-tab {
+                            border-color: $primary-color;
+                            transition: .6s ease-in;
+                        }
+                    }
+                }
+                .tab-content {
+                    width: 100%;
+                    max-height: 100vh;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    &::-webkit-scrollbar{
+                        width: 8px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: $light-color;
+                        border-radius: 8px;
+                      }
+                      
+                      /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background: $light-dark-color;
+                        border-radius: 8px;
+                      }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:583px) {
+    .product-detail-content {
+        .card {
+            .product-prices{
+                margin-bottom: 1rem;
+            }
+        }
+        .product-action-options {
+            justify-content: space-between;
+            .compare-icon{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:406px) {
+    .product-detail-content {
+        .card {
+            .add-to-cart{
+                button{
+                    margin-left: 0;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:386px) {
+    .product-detail {
+        .row {
+            .product-content {
+                .product-detail-tabs {
+                    .tab-headings {
+                        overflow-x: auto;
+                        &::-webkit-scrollbar{
+                            height: 6px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            background: $light-color;
+                            border-radius: 8px;
+                          }
+                          
+                          /* Handle */
+                        &::-webkit-scrollbar-thumb {
+                            background: $light-dark-color;
+                            border-radius: 8px;
+                          }
+                        h4 {
+                            padding-right: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
