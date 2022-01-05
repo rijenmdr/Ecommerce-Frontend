@@ -50,7 +50,7 @@ const BlogDetailContent = ({ blog }) => {
                 }
             </div>
             <div className='blog-center-content w-50'>
-                <div className='blog-description'>
+                <div className='content-description'>
                     {ReactHtmlParser(blog?.description)}
                 </div>
 
