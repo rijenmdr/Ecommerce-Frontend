@@ -37,7 +37,8 @@ const bestproducts = [
         short_description: "Space for a small product description",
         price: 100,
         prevPrice: 220,
-        discountedPercentage: 20
+        discountedPercentage: 20,
+        averageRating: 2
     },
     {
         id: 2,
@@ -46,7 +47,8 @@ const bestproducts = [
         short_description: "Space for a small product description",
         price: 120,
         prevPrice: 200,
-        discountedPercentage: 20
+        discountedPercentage: 20,
+        averageRating: 2
     },
     {
         id: 3,
@@ -54,6 +56,7 @@ const bestproducts = [
         image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
         short_description: "Space for a small product description",
         price: 150,
+        averageRating: 4
     }
 ]
 

@@ -37,7 +37,8 @@ const best_sold_products = [
         short_description: "Space for a small product description",
         price: 210000,
         prevPrice: 220000,
-        discountedPercentage: 30
+        discountedPercentage: 30,
+        averageRating: 3
     },
     {
         id: 2,
@@ -45,6 +46,7 @@ const best_sold_products = [
         image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
         short_description: "Space for a small product description",
         price: 2100,
+        averageRating: 2
     },
     {
         id: 3,
@@ -52,6 +54,7 @@ const best_sold_products = [
         image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
         short_description: "Space for a small product description",
         price: 1500,
+        averageRating: 2
     }
 ]
 const BestSellingProducts = () => {
