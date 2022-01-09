@@ -7,8 +7,10 @@ const TextInput = ({
     label,
     type,
     value,
+    min,
     handleChange,
     handleBlur,
+    handleFocus,
     placeholder,
     disabled,
     touched,
@@ -25,7 +27,9 @@ const TextInput = ({
                 placeholder={placeholder}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                onFocus={handleFocus}
                 className={touched && errors ? "input-error" : null}
+                min={min}
             />
             {touched && errors ? (
                 <div className="error-message">{errors}</div>

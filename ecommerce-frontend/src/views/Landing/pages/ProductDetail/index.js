@@ -19,36 +19,36 @@ const ProductDetail = () => {
         'https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg'
     ]);
     const [relatedProducts] = useState([
-        {
-            id: 1,
-            title: "Iphone 13 pro",
-            image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
-            short_description: "Space for a small product description",
-            price: 210000,
-            prevPrice: 220000,
-            discountedPercentage: 30
-        },
-        {
-            id: 2,
-            title: "Nike Trainer",
-            image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
-            short_description: "Space for a small product description",
-            price: 2100,
-        },
-        {
-            id: 3,
-            title: "Mantra Guitar",
-            image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
-            short_description: "Space for a small product description",
-            price: 1500,
-        },
-        {
-            id: 4,
-            title: "Vodka",
-            image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
-            short_description: "Space for a small product description",
-            price: 1500,
-        }
+        // {
+        //     id: 1,
+        //     title: "Iphone 13 pro",
+        //     image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
+        //     short_description: "Space for a small product description",
+        //     price: 210000,
+        //     prevPrice: 220000,
+        //     discountedPercentage: 30,
+        // },
+        // {
+        //     id: 2,
+        //     title: "Nike Trainer",
+        //     image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
+        //     short_description: "Space for a small product description",
+        //     price: 2100,
+        // },
+        // {
+        //     id: 3,
+        //     title: "Mantra Guitar",
+        //     image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
+        //     short_description: "Space for a small product description",
+        //     price: 1500,
+        // },
+        // {
+        //     id: 4,
+        //     title: "Vodka",
+        //     image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
+        //     short_description: "Space for a small product description",
+        //     price: 1500,
+        // }
     ])
 
 

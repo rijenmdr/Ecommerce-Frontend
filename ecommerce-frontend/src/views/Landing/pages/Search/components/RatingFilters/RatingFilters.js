@@ -2,11 +2,14 @@ import React from 'react'
 import { Form } from 'react-bootstrap'
 import StarRatings from 'react-star-ratings'
 
-const RatingFilters = ({ rate, setRating, index }) => {
+const RatingFilters = ({ rate, selectedRating, index, handleRatingChange }) => {
     return (
         <div className='checkboxes d-flex align-items-center mt-2'>
             <Form.Check
-                type="checkbox"
+                type="radio"
+                checked = {selectedRating === (5 - index).toString()}
+                value ={5 - index}
+                onChange={handleRatingChange}
                 label={
                     <StarRatings
                         rating={5 - index}

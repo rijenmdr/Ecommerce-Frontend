@@ -35,13 +35,13 @@ const ProductDetailContent = () => {
         <div className='product-detail-content'>
             <h1>Carrots from Tomissy Farm</h1>
             <div className='d-flex align-items-end'>
-                <StarRatings
-                    rating={3.5}
-                    starRatedColor="#FDBC15"
-                    starDimension='20'
-                    starSpacing='5'
-                    numberOfStars={5}
-                />
+                    <StarRatings
+                        rating={3.5}
+                        starRatedColor="#FDBC15"
+                        starDimension='20'
+                        starSpacing='5'
+                        numberOfStars={5}
+                    />
                 <p className="text-dark-light ml-sm mb-0">
                     <u>(1 customer review)</u>
                 </p>
